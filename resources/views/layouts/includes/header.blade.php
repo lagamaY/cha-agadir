@@ -26,15 +26,23 @@
     <link href="{{ asset('app-assets/css/animate.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('app-assets/css/css-plugin-collections.css') }}" rel="stylesheet" />
     <!-- CSS | menuzord megamenu skins -->
+
+
+    <!-- fichier css qui m'interesse -->
+
     <link href="{{ asset('app-assets/css/menuzord-megamenu.css') }}" rel="stylesheet" />
-    <link id="menuzord-menu-skins" href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }}"
-        rel="stylesheet" />
+
+    <!-- fin -->
+
+
+    <link id="menuzord-menu-skins" href="{{ asset('app-assets/css/menuzord-skins/menuzord-boxed.css') }}" rel="stylesheet" />
     <!-- CSS | Main style file -->
     <link href="{{ asset('app-assets/css/style-main.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Preloader Styles -->
     <link href="{{ asset('app-assets/css/preloader.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Custom Margin Padding Collection -->
     <link href="{{ asset('app-assets/css/custom-bootstrap-margin-padding.css') }}" rel="stylesheet" type="text/css">
+    
     <!-- CSS | Responsive media queries -->
     <link href="{{ asset('app-assets/css/responsive.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
@@ -91,14 +99,14 @@
 <body class="has-side-panel side-panel-right fullwidth-page">
 
     <div id="wrapper" class="clearfix">
-        <!--
+        
         <div id="preloader">
             <div id="spinner">
                 <img alt="" src="https://www.perodua.com.my/assets/gif/loading4.gif">
             </div>
             <div id="disable-preloader" class="btn btn-default btn-sm">Désactiver</div>
         </div>
-    -->
+   
 
         <!-- Header -->
         <header id="header" class="header">
@@ -188,6 +196,7 @@
             <div class="header-nav">
                 <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
                     <div class="container">
+                        <!-- logo -->
                         <div style="display:flex;justify-content:center;width:100%;">
 
                             @if (count($logo_url) > 0)
@@ -199,17 +208,25 @@
                             @endif
                         </div>
 
+                        <!-- menu de navigation du site -->
                         <nav id="menuzord-right" class="menuzord default theme-colored">
 
 
                             <ul class="menuzord-menu list-unstyled">
 
+                                <!-- 1 -->
+
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
-                                    <a href="{{ route('home') }}" class="font-14 text-uppercase"
-                                        style="padding: 10px 10px 10px 10px; ">{{ __('header.title1') }}</a>
+                                    <a href="{{ route('home') }}" class="font-14 text-uppercase"  style="padding: 10px 10px 10px 10px; ">
+                                        {{ __('header.title1') }}
+                                    </a>
                                 </li>
-                                <li><a href="#home" class="font-14 text-uppercase"
-                                        style="padding: 10px 10px 10px 10px;">{{ __('header.title2') }}</a>
+
+                                <!-- 2 -->
+                                <li>
+                                    <a href="#home" class="font-14 text-uppercase"  style="padding: 10px 10px 10px 10px;">
+                                         {{ __('header.title2') }}
+                                    </a>
                                     <ul class="dropdown">
                                         <li><a href="{{ route('director.index') }}">{{ __('header.subtitle1') }}</a>
                                         </li>
@@ -233,12 +250,17 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li @if (Route::current()->getName() == 'course.index') class="active" @endif><a
-                                        href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase d-inline">{{ __('header.title3') }}</a>
+
+
+                                <!-- 3 -->
+                                <li @if (Route::current()->getName() == 'course.index') class="active" @endif>
+                                    <a
+                                        href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase d-inline">
+                                        {{ __('header.title3') }}
+                                    </a>
                                     <ul class="dropdown" style="padding-left: -50px;">
                                         <li style="padding-left: -50px;">
-                                            <a href="{{ route('degree.show', "Ingénieur d'État") }}"
+                                            <a href="{{ route('degree.show', "Ingénieur d&rsquo; État ") }}"
                                                 style="padding-left: -50px">{{ __('header.subtitle9') }}</a>
                                             <ul class="dropdown">
                                                 <li><a
@@ -316,17 +338,41 @@
                                     </ul>
                                 </li>
 
-                                <li><a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">{{ __('header.title4') }}</a>
-                                <li><a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">{{ __('header.title5') }}</a>
-                                <li><a href="{{ route('experience.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">{{ __('header.title6') }}</a>
-                                <li><a href="{{ route('impact.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">{{ __('header.title7') }}</a>
-                                <li><a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"
-                                        class="font-14 text-uppercase">{{ __('header.title8') }}</a>
+                                <!-- 4 -->
 
+                                <li>
+                                    <a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                        {{ __('header.title4') }}
+                                    </a>
+                                </li>
+
+                                <!-- 5 -->
+                                <li>
+                                    <a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                            {{ __('header.title5') }}
+                                    </a>
+                                 </li>
+
+                                <!-- 6 -->
+                                <li>
+                                    <a href="{{ route('experience.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                        {{ __('header.title6') }}
+                                    </a>
+                                </li>
+
+                                <!-- 7 -->
+                                <li>
+                                    <a href="{{ route('impact.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                        {{ __('header.title7') }}
+                                    </a>
+                                 </li>
+
+                                <!-- 8 -->
+                                <li>
+                                    <a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"  class="font-14 text-uppercase">
+                                    {{ __('header.title8') }}
+                                    </a>
+                                 </li>
                             </ul>
 
                         </nav>
@@ -337,6 +383,8 @@
 
 
         <style>
+
+
             @media only screen and (min-width:500px) {
                 .break {
                     display: none;
@@ -377,6 +425,10 @@
                 background-color: #1F334560;
             }
         </style>
+
+
+
+
         <script>
             const switchlang = document.getElementById('switchlang');
 
