@@ -64,7 +64,7 @@ License: http://codecanyon.net/licenses
   
   /* Menu items */
   .menuzord-menu > li {
-    display: inline-block;
+    display: inline-block; /* lagama */
     float: left;
   }
   
@@ -441,9 +441,9 @@ License: http://codecanyon.net/licenses
 
 /* 14 - MOBILE MODE (RESPONSIVE MODE)======================================*/
 
+/* @media (max-width: 900px) */
 
-
-@media (max-width: 900px)
+@media (max-width: 900px) 
 
 {
 
@@ -484,7 +484,7 @@ License: http://codecanyon.net/licenses
             /* Menu items */
             .menuzord-responsive .menuzord-menu > li {
                 width: 100%;
-                display: block;
+                display: block;  /*lagama*/
                 position: relative;
             }
             
@@ -498,6 +498,10 @@ License: http://codecanyon.net/licenses
             .menuzord-responsive .menuzord-menu > li:first-child > a {
                 border-top: solid 1px #f0f0f0;
             }
+
+
+
+
             /* Dropdown */
             .menuzord-responsive .menuzord-menu ul.dropdown,
             .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown {

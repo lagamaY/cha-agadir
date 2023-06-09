@@ -21,14 +21,22 @@
     <link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
 
     <!-- Stylesheet -->
+
+    <!-- IMPACT le menu -->
+        <!-- le menu passe à la ligne suivante lorsque mon écran est à 120% de zoom et au click sur le toggle,
+    le menu s'affiche-->
     <link href="{{ asset('app-assets/css/bootstrap.min.css') }}" rel='stylesheet' type='text/css'>
+    <!-- fin -->
+
     <link href="{{ asset('app-assets/css/jquery-ui.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('app-assets/css/animate.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('app-assets/css/css-plugin-collections.css') }}" rel="stylesheet" />
     <!-- CSS | menuzord megamenu skins -->
 
 
-    <!-- fichier css qui m'interesse -->
+    <!-- IMPACT le menu-->
+        <!-- Le menu reste sur la même ligne quelque soit la taille de l'écran.
+    Au clic sur le toggle, rien ne s'affiche-->
 
     <link href="{{ asset('app-assets/css/menuzord-megamenu.css') }}" rel="stylesheet" />
 
@@ -42,11 +50,12 @@
     <link href="{{ asset('app-assets/css/preloader.css') }}" rel="stylesheet" type="text/css">
     <!-- CSS | Custom Margin Padding Collection -->
     <link href="{{ asset('app-assets/css/custom-bootstrap-margin-padding.css') }}" rel="stylesheet" type="text/css">
-    
+
     <!-- CSS | Responsive media queries -->
     <link href="{{ asset('app-assets/css/responsive.css') }}" rel="stylesheet" type="text/css">
+    
     <!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
-    <!-- <link href="css/style.css" rel="stylesheet" type="text/css"> -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 
     <!-- Revolution Slider 5.x CSS settings -->
     <link href="{{ asset('app-assets/js/revolution-slider/css/settings.css') }}" rel="stylesheet" type="text/css" />
@@ -54,7 +63,12 @@
     <link href="{{ asset('app-assets/js/revolution-slider/css/navigation.css') }}" rel="stylesheet" type="text/css" />
 
     <!-- CSS | Theme Color -->
+
+     <!-- IMPACT peut-être le menu ( a verifier)-->
     <link href="{{ asset('app-assets/css/colors/theme-skin-color-set1.css') }}" rel="stylesheet" type="text/css">
+      <!-- FIN -->
+
+
     <!-- external javascripts -->
     <script src="{{ asset('app-assets/js/jquery-2.2.4.min.js') }}"></script>
     <script src="{{ asset('app-assets/js/jquery-ui.min.js') }}"></script>
@@ -255,7 +269,7 @@
                                 <!-- 3 -->
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif>
                                     <a
-                                        href="{{ route('course.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase d-inline">
+                                        href="{{ route('course.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase d-inline">
                                         {{ __('header.title3') }}
                                     </a>
                                     <ul class="dropdown" style="padding-left: -50px;">
@@ -341,35 +355,35 @@
                                 <!-- 4 -->
 
                                 <li>
-                                    <a href="{{ route('search.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                    <a href="{{ route('search.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
                                         {{ __('header.title4') }}
                                     </a>
                                 </li>
 
                                 <!-- 5 -->
                                 <li>
-                                    <a href="{{ route('center.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                    <a href="{{ route('center.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
                                             {{ __('header.title5') }}
                                     </a>
                                  </li>
 
                                 <!-- 6 -->
                                 <li>
-                                    <a href="{{ route('experience.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                    <a href="{{ route('experience.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
                                         {{ __('header.title6') }}
                                     </a>
                                 </li>
 
                                 <!-- 7 -->
                                 <li>
-                                    <a href="{{ route('impact.index') }}" style="padding: 10px 10px 10px 10px;" class="font-14 text-uppercase">
+                                    <a href="{{ route('impact.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
                                         {{ __('header.title7') }}
                                     </a>
                                  </li>
 
                                 <!-- 8 -->
                                 <li>
-                                    <a href="{{ route('business.index') }}" style="padding: 10px 10px 10px 10px;"  class="font-14 text-uppercase">
+                                    <a href="{{ route('business.index') }}" style="padding: 10px 10px ;"  class="font-14 text-uppercase">
                                     {{ __('header.title8') }}
                                     </a>
                                  </li>
@@ -424,6 +438,185 @@
 
                 background-color: #1F334560;
             }
+
+
+   /* Affichage du menu pour les ecrans de 901px min et 1000px maximum          */
+
+@media (min-width: 901px) and (max-width: 1000px)
+
+{
+
+            /* Responsive menu container */
+            .menuzord-responsive.menuzord {
+                padding: 0;
+            }
+            
+            /* Brand */
+            .menuzord-responsive .menuzord-brand {
+                margin: 8px 30px 10px 20px;
+                font-size: 20px;
+                line-height: 1.55;
+            }
+            
+            /* Show/hide button */
+            .menuzord-responsive .showhide {
+                margin: 0;
+            }
+            
+            /* Menu */
+            .menuzord-responsive .menuzord-menu {
+                width: 100%;
+                float: left !important;
+            }
+            
+            /* scrollable menu*/
+            .menuzord-responsive .menuzord-menu.scrollable {
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .menuzord-responsive .menuzord-menu.scrollable > .scrollable-fix {
+                display: block;
+            }
+            
+    
+            /* Menu items */
+            .menuzord-responsive .menuzord-menu > li {
+                width: 100%;
+                display: block;  
+                position: relative;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li > a {
+                width: 100%;
+                padding: 12px 20px;
+                display: block;
+                border-bottom: solid 1px #f0f0f0;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li:first-child > a {
+                border-top: solid 1px #f0f0f0;
+            }
+
+
+
+
+            /* Dropdown */
+            .menuzord-responsive .menuzord-menu ul.dropdown,
+            .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown {
+                width: 100%;
+                left: 0;
+                position: static;
+                border: none;
+                background: #fff;
+                float: left;
+            }
+
+            /* Dropdown items */
+            .menuzord-responsive .menuzord-menu ul.dropdown li {
+            position: relative;
+            }
+
+            .menuzord-responsive .menuzord-menu ul.dropdown li a {
+                border-bottom: solid 1px #f0f0f0;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > a {
+                padding-left: 40px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > a {
+                padding-left: 60px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li > a {
+                padding-left: 80px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li:hover > a {
+                padding-left: 50px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li:hover > a {
+                padding-left: 70px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li:hover > a {
+                padding-left: 90px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu li .indicator {
+                width: 60px;
+                height: 45px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 22px;
+                text-align: center;
+                line-height: 43px;
+                border-left: solid 1px #f5f5f5;
+            }
+            
+            .menuzord-responsive .menuzord-menu li ul.dropdown li .indicator {
+                height: 38px;
+                right: 0;
+                top: 0;
+                font-size: 18px;
+                line-height: 36px;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li > .megamenu {
+                width: 100% !important;
+                left: 0 !important;
+                position: static;
+                border-top: none;
+                border-bottom: solid 1px #f0f0f0;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row [class*="col"] {
+                float: none;
+                display: block;
+                width: 100% !important;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row:first-child [class*="col"]:first-child {
+                margin-top: 0;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row {
+                margin-top: 0;
+            }
+            
+            /* Search field */
+            .menuzord-responsive .menuzord-menu > li.search form {
+                width: 100%;
+                margin: 4px 0;
+                padding: 10px 16px !important;
+            }
+            
+            .menuzord-responsive .menuzord-menu > li.search form input[type="text"] {
+                width: 100%;
+            }
+            
+            /* Tabs */
+            .menuzord-responsive .menuzord-tabs-nav {
+                width: 100%;
+            }
+            
+            .menuzord-responsive .menuzord-tabs-content {
+                width: 100%;
+            }
+            
+
+}
+
+
+
+
+
+
         </style>
 
 

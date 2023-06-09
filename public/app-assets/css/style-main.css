@@ -284,11 +284,14 @@ form {
 .breadcrumb.white li a {
   color: #fff;
 }
-@media only screen and (min-width: 768px) {
+
+@media only screen and (min-width: 768px) 
+{
   .breadcrumb.text-right {
     text-align: right;
   }
 }
+
 /*Drop Caps*/
 .drop-caps p {
   text-align: justify;
@@ -778,7 +781,8 @@ section > .container-fluid {
 .scrolltofixed-container {
   position: static;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767px) 
+{
   .scrolltofixed-container .scrolltofixed {
     position: static !important;
   }
