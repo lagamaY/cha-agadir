@@ -231,14 +231,14 @@
                                 <!-- 1 -->
 
                                 <li @if (Route::current()->getName() == 'home') class='active' @endif>
-                                    <a href="{{ route('home') }}" class="font-14 text-uppercase"  style="padding: 10px 10px 10px 10px; ">
+                                    <a href="{{ route('home') }}" class="font-14 text-uppercase" >
                                         {{ __('header.title1') }}
                                     </a>
                                 </li>
 
                                 <!-- 2 -->
                                 <li>
-                                    <a href="#home" class="font-14 text-uppercase"  style="padding: 10px 10px 10px 10px;">
+                                    <a href="#home" class="font-14 text-uppercase"  >
                                          {{ __('header.title2') }}
                                     </a>
                                     <ul class="dropdown">
@@ -269,7 +269,7 @@
                                 <!-- 3 -->
                                 <li @if (Route::current()->getName() == 'course.index') class="active" @endif>
                                     <a
-                                        href="{{ route('course.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase d-inline">
+                                        href="{{ route('course.index') }}"  class="font-14 text-uppercase d-inline">
                                         {{ __('header.title3') }}
                                     </a>
                                     <ul class="dropdown" style="padding-left: -50px;">
@@ -355,35 +355,35 @@
                                 <!-- 4 -->
 
                                 <li>
-                                    <a href="{{ route('search.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
+                                    <a href="{{ route('search.index') }}"  class="font-14 text-uppercase">
                                         {{ __('header.title4') }}
                                     </a>
                                 </li>
 
                                 <!-- 5 -->
                                 <li>
-                                    <a href="{{ route('center.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
+                                    <a href="{{ route('center.index') }}"  class="font-14 text-uppercase">
                                             {{ __('header.title5') }}
                                     </a>
                                  </li>
 
                                 <!-- 6 -->
                                 <li>
-                                    <a href="{{ route('experience.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
+                                    <a href="{{ route('experience.index') }}"  class="font-14 text-uppercase">
                                         {{ __('header.title6') }}
                                     </a>
                                 </li>
 
                                 <!-- 7 -->
                                 <li>
-                                    <a href="{{ route('impact.index') }}" style="padding: 10px 10px ;" class="font-14 text-uppercase">
+                                    <a href="{{ route('impact.index') }}"  class="font-14 text-uppercase">
                                         {{ __('header.title7') }}
                                     </a>
                                  </li>
 
                                 <!-- 8 -->
                                 <li>
-                                    <a href="{{ route('business.index') }}" style="padding: 10px 10px ;"  class="font-14 text-uppercase">
+                                    <a href="{{ route('business.index') }}"   class="font-14 text-uppercase">
                                     {{ __('header.title8') }}
                                     </a>
                                  </li>
@@ -398,6 +398,13 @@
 
         <style>
 
+        /* Ajouter par lagama */
+           .menuzord-menu > li > a{
+
+                   padding: 10px ;
+                    
+                }
+        /* fin */
 
             @media only screen and (min-width:500px) {
                 .break {
@@ -439,178 +446,53 @@
                 background-color: #1F334560;
             }
 
+            /* ajouter par lagama */
 
-   /* Affichage du menu pour les ecrans de 901px min et 1000px maximum          */
-
-@media (min-width: 901px) and (max-width: 1000px)
-
-{
-
-            /* Responsive menu container */
-            .menuzord-responsive.menuzord {
-                padding: 0;
-            }
-            
-            /* Brand */
-            .menuzord-responsive .menuzord-brand {
-                margin: 8px 30px 10px 20px;
-                font-size: 20px;
-                line-height: 1.55;
-            }
-            
-            /* Show/hide button */
-            .menuzord-responsive .showhide {
-                margin: 0;
-            }
-            
-            /* Menu */
-            .menuzord-responsive .menuzord-menu {
-                width: 100%;
-                float: left !important;
-            }
-            
-            /* scrollable menu*/
-            .menuzord-responsive .menuzord-menu.scrollable {
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .menuzord-responsive .menuzord-menu.scrollable > .scrollable-fix {
-                display: block;
-            }
-            
-    
-            /* Menu items */
-            .menuzord-responsive .menuzord-menu > li {
-                width: 100%;
-                display: block;  
-                position: relative;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li > a {
-                width: 100%;
-                padding: 12px 20px;
-                display: block;
-                border-bottom: solid 1px #f0f0f0;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li:first-child > a {
-                border-top: solid 1px #f0f0f0;
-            }
+            @media (min-width: 1001px) and (max-width: 1200px) {
 
 
+                #menuzord-right > ul {
+                        -webkit-text-size-adjust: 100%;
+                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                        -webkit-font-smoothing: antialiased;
+                        --wp-admin-theme-color: #007cba;
+                        --wp-admin-theme-color--rgb: 0,124,186;
+                        --wp-admin-theme-color-darker-10: #006ba1;
+                        --wp-admin-theme-color-darker-10--rgb: 0,107,161;
+                        --wp-admin-theme-color-darker-20: #005a87;
+                        --wp-admin-theme-color-darker-20--rgb: 0,90,135;
+                        --wp-admin-border-width-focus: 1.5px;
+                        --wp--preset--font-size--normal: 16px;
+                        --wp--preset--font-size--huge: 42px;
+                        line-height: 1.7;
+                        color: #808080;
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: 'Open Sans', sans-serif;
+                        -webkit-box-sizing: border-box;
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+                        float: right;
+                        max-height: 400px;
+                        display: flex; /* Nouvelle ligne ajoutée */
+                        flex-wrap: nowrap; /* Assure que les éléments ne passent pas à la ligne suivante */
+                    }
 
 
-            /* Dropdown */
-            .menuzord-responsive .menuzord-menu ul.dropdown,
-            .menuzord-responsive .menuzord-menu ul.dropdown li ul.dropdown {
-                width: 100%;
-                left: 0;
-                position: static;
-                border: none;
-                background: #fff;
-                float: left;
-            }
+                    .menuzord-menu > li {
+                            display: inline-block; 
+                        }
+                
+                    .menuzord-menu > li > a {
 
-            /* Dropdown items */
-            .menuzord-responsive .menuzord-menu ul.dropdown li {
-            position: relative;
-            }
+                        
+                        padding: 10px 5px;
+                      
+                    }
 
-            .menuzord-responsive .menuzord-menu ul.dropdown li a {
-                border-bottom: solid 1px #f0f0f0;
+                
             }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > a {
-                padding-left: 40px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > a {
-                padding-left: 60px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li > a {
-                padding-left: 80px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li:hover > a {
-                padding-left: 50px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li:hover > a {
-                padding-left: 70px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu.menuzord-indented > li > ul.dropdown > li > ul.dropdown > li > ul.dropdown > li:hover > a {
-                padding-left: 90px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu li .indicator {
-                width: 60px;
-                height: 45px;
-                position: absolute;
-                right: 0;
-                top: 0;
-                font-size: 22px;
-                text-align: center;
-                line-height: 43px;
-                border-left: solid 1px #f5f5f5;
-            }
-            
-            .menuzord-responsive .menuzord-menu li ul.dropdown li .indicator {
-                height: 38px;
-                right: 0;
-                top: 0;
-                font-size: 18px;
-                line-height: 36px;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li > .megamenu {
-                width: 100% !important;
-                left: 0 !important;
-                position: static;
-                border-top: none;
-                border-bottom: solid 1px #f0f0f0;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row [class*="col"] {
-                float: none;
-                display: block;
-                width: 100% !important;
-                margin-left: 0;
-                margin-top: 15px;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row:first-child [class*="col"]:first-child {
-                margin-top: 0;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li > .megamenu .megamenu-row {
-                margin-top: 0;
-            }
-            
-            /* Search field */
-            .menuzord-responsive .menuzord-menu > li.search form {
-                width: 100%;
-                margin: 4px 0;
-                padding: 10px 16px !important;
-            }
-            
-            .menuzord-responsive .menuzord-menu > li.search form input[type="text"] {
-                width: 100%;
-            }
-            
-            /* Tabs */
-            .menuzord-responsive .menuzord-tabs-nav {
-                width: 100%;
-            }
-            
-            .menuzord-responsive .menuzord-tabs-content {
-                width: 100%;
-            }
-            
-
-}
 
 
 

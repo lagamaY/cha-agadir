@@ -64,7 +64,7 @@ License: http://codecanyon.net/licenses
   
   /* Menu items */
   .menuzord-menu > li {
-    display: inline-block; /* lagama */
+    display: inline-block; 
     float: left;
   }
   
@@ -443,7 +443,7 @@ License: http://codecanyon.net/licenses
 
 /* @media (max-width: 900px) */
 
-@media (max-width: 900px) 
+@media (max-width: 1000px) 
 
 {
 
