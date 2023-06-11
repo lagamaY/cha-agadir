@@ -79,6 +79,8 @@
                 <!-- Mailchimp Subscription Form Ends Here -->
             </div>
         </div>
+
+        <!-- Elements à ameliorer -->
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
                 <h4 class="widget-title line-bottom-theme-colored2" style="color:#1f3344;">{{ __('footer.title3') }}
@@ -106,6 +108,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- fin -->
 
         <div class="col-sm-6 col-md-3">
             <div class="widget dark">
@@ -207,6 +211,15 @@
 
     .footer .widget .widget-title {
         margin-top: 0px;
+    }
+
+    /* Ajouter par lagama */
+
+    @media(max-width: 767px){
+
+        #footer > div.container.pt-60.pb-20 > div:nth-child(3) > div{
+            display: none; //* Ne pas afficher le footer pour les tailles d'écran inférieur ou égal à 767px*/
+        }
     }
 </style>
 

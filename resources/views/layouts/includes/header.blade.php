@@ -226,7 +226,7 @@
                         <nav id="menuzord-right" class="menuzord default theme-colored">
 
 
-                            <ul class="menuzord-menu list-unstyled">
+                            <ul   id="responsive1001"  class="menuzord-menu list-unstyled" >
 
                                 <!-- 1 -->
 
@@ -398,13 +398,7 @@
 
         <style>
 
-        /* Ajouter par lagama */
-           .menuzord-menu > li > a{
 
-                   padding: 10px ;
-                    
-                }
-        /* fin */
 
             @media only screen and (min-width:500px) {
                 .break {
@@ -448,48 +442,27 @@
 
             /* ajouter par lagama */
 
+            .menuzord-menu > li > a{
+
+                padding: 10px ;
+                
+                }
+
+            .menuzord-menu.menuzord-right {
+                    width: 100%;
+                    margin: auto;
+                }
+
             @media (min-width: 1001px) and (max-width: 1200px) {
 
 
-                #menuzord-right > ul {
-                        -webkit-text-size-adjust: 100%;
-                        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                        -webkit-font-smoothing: antialiased;
-                        --wp-admin-theme-color: #007cba;
-                        --wp-admin-theme-color--rgb: 0,124,186;
-                        --wp-admin-theme-color-darker-10: #006ba1;
-                        --wp-admin-theme-color-darker-10--rgb: 0,107,161;
-                        --wp-admin-theme-color-darker-20: #005a87;
-                        --wp-admin-theme-color-darker-20--rgb: 0,90,135;
-                        --wp-admin-border-width-focus: 1.5px;
-                        --wp--preset--font-size--normal: 16px;
-                        --wp--preset--font-size--huge: 42px;
-                        line-height: 1.7;
-                        color: #808080;
-                        font-size: 14px;
-                        font-weight: 500;
-                        font-family: 'Open Sans', sans-serif;
-                        -webkit-box-sizing: border-box;
-                        margin: 0;
-                        padding: 0;
-                        list-style: none;
-                        float: right;
-                        max-height: 400px;
+                #responsive1001 {
+                       
+                    
                         display: flex; /* Nouvelle ligne ajoutée */
                         flex-wrap: nowrap; /* Assure que les éléments ne passent pas à la ligne suivante */
                     }
 
-
-                    .menuzord-menu > li {
-                            display: inline-block; 
-                        }
-                
-                    .menuzord-menu > li > a {
-
-                        
-                        padding: 10px 5px;
-                      
-                    }
 
                 
             }
